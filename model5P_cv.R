@@ -132,7 +132,7 @@ model5P <- function(x, y, sd=NULL, wcoef=0.25, method=c("p5", "p4"), nfold=5,
   }
   
   return(list(pars=best$estimate, goodness=perf$goodness, err=perf$err, p=perf$p,
-              x=sort(x), yfit=yfit[order(x)], newX=newX, newY=newY,
+              x=x, yfit=yfit, newX=newX, newY=newY,
               xflex=Xflex, yflex=Yflex, x50=X50, y50=Y50,
               slope=B, yIntercept=A, xInfl=-A/B))
 }
