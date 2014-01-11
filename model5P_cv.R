@@ -98,7 +98,8 @@ model5P <- function(x, y, sd=NULL, wcoef=0.25, method=c("p5", "p4"), nfold=5,
   s <- best$estimate[5]
   
   # Estimation des valeurs
-  newX <- seq(min(x)*0.75, max(x)*1.2, length=500)
+#  newX <- seq(min(x)*0.75, max(x)*1.2, length=500)
+  newX <- seq(min(x), max(x), length=length(x))
   newY <- .PL5(bottom, top, xmid, scal, s, newX)
   yfit <- .PL5(bottom, top, xmid, scal, s, x)
   
